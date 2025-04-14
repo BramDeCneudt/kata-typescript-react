@@ -1,11 +1,181 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Gilded Rose Approval > should foo 1`] = `
+exports[`Gilded Rose Golden Test > Golden Test base test 1`] = `
 [
   Item {
-    "name": "foo",
+    "name": "+5 Dexterity Vest",
+    "quality": 0,
+    "sellIn": 9,
+  },
+  Item {
+    "name": "+6 Dexterity Vest",
+    "quality": 8,
+    "sellIn": -2,
+  },
+  Item {
+    "name": "Aged Brie",
+    "quality": 1,
+    "sellIn": 1,
+  },
+  Item {
+    "name": "Aged Brie",
+    "quality": 50,
+    "sellIn": 1,
+  },
+  Item {
+    "name": "Elixir of the Mongoose",
+    "quality": 6,
+    "sellIn": 4,
+  },
+  Item {
+    "name": "Sulfuras, Hand of Ragnaros",
+    "quality": 80,
+    "sellIn": 0,
+  },
+  Item {
+    "name": "Sulfuras, Hand of Ragnaros",
+    "quality": 80,
+    "sellIn": -1,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 50,
+    "sellIn": 14,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 21,
+    "sellIn": 14,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 50,
+    "sellIn": 9,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 22,
+    "sellIn": 9,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 23,
+    "sellIn": 4,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 50,
+    "sellIn": 4,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
     "quality": 0,
     "sellIn": -1,
+  },
+  Item {
+    "name": "Conjured Mana Cake",
+    "quality": 5,
+    "sellIn": 2,
+  },
+  Item {
+    "name": "Conjured Mana Cake",
+    "quality": 4,
+    "sellIn": -4,
+  },
+  Item {
+    "name": "Conjured Mana Cake",
+    "quality": 1,
+    "sellIn": -4,
+  },
+]
+`;
+
+exports[`Gilded Rose Golden Test > Golden Test test after 5 days 1`] = `
+[
+  Item {
+    "name": "+5 Dexterity Vest",
+    "quality": 0,
+    "sellIn": 3,
+  },
+  Item {
+    "name": "+6 Dexterity Vest",
+    "quality": 0,
+    "sellIn": -8,
+  },
+  Item {
+    "name": "Aged Brie",
+    "quality": 12,
+    "sellIn": -5,
+  },
+  Item {
+    "name": "Aged Brie",
+    "quality": 50,
+    "sellIn": -5,
+  },
+  Item {
+    "name": "Elixir of the Mongoose",
+    "quality": 0,
+    "sellIn": -2,
+  },
+  Item {
+    "name": "Sulfuras, Hand of Ragnaros",
+    "quality": 80,
+    "sellIn": 0,
+  },
+  Item {
+    "name": "Sulfuras, Hand of Ragnaros",
+    "quality": 80,
+    "sellIn": -1,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 50,
+    "sellIn": 8,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 29,
+    "sellIn": 8,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 50,
+    "sellIn": 3,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 36,
+    "sellIn": 3,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 0,
+    "sellIn": -2,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 0,
+    "sellIn": -2,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 0,
+    "sellIn": -7,
+  },
+  Item {
+    "name": "Conjured Mana Cake",
+    "quality": 0,
+    "sellIn": -4,
+  },
+  Item {
+    "name": "Conjured Mana Cake",
+    "quality": 0,
+    "sellIn": -10,
+  },
+  Item {
+    "name": "Conjured Mana Cake",
+    "quality": 0,
+    "sellIn": -10,
   },
 ]
 `;

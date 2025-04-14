@@ -2,7 +2,7 @@ import { SidebarProvider, SidebarTrigger } from "~/components/ui/sidebar"
 import { AppSidebar } from "~/components/app-sidebar"
 import type { Route } from "./+types/home";
 import { GildedRose, Item } from "~/lib/gilded-rose";
-import { ItemCard } from "~/components/ItemCard";
+import { ItemCard } from "~/components/item-card";
 import { useEffect, useState } from "react";
 import { Button } from "~/components/ui/button";
 

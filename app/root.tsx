@@ -6,6 +6,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { SidebarProvider, SidebarTrigger } from "~/components/ui/sidebar"
+import { AppSidebar } from "~/components/app-sidebar"
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -33,8 +35,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <h1>Main Layout!</h1>
-        {children}
+        <SidebarProvider>
+          <AppSidebar />
+          <main>
+            <SidebarTrigger />
+            <div className="pl-5 flex flex-col justify-center min-h-svh">
+              {children}
+            </div>
+          </main>
+        </SidebarProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

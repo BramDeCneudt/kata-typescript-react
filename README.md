@@ -1,87 +1,74 @@
-# Welcome to React Router!
+# Kata-Typescript
+This Gilded Rose kata also contains a react frontend so you can have some interactivty with the Gilded Rose kata. Please keep in mind that this is a MVP a lot can be improved.
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Before you execute any commands you should also install all the dependencies:
+```npm install```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-## Features
+If you only want to test or see the kata code you can have a look in app/lib/gilded-rose.ts and the app/lib/kata folder.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+You can use following command to run the accompied test in the test/ folder.
 
-## Getting Started
+```npm run test```
 
-### Installation
+## How to run the React frontend
 
-Install the dependencies:
+If you want to run it use following command:
+```npm run dev```
 
-```bash
-npm install
-```
+The React frontend will run on [localhost:5173](http://localhost:5173/).
 
-### Development
+You will be greeted with the "Next day" button and by it's side the amount of days you already have. Underneath that you have the cards each representing an item.
 
-Start the development server with HMR:
+The react dependencies used are:
+- React router for routing, using the flatRoutes config (see the app/routes.tsx). This means the folder structure is used as the routing routes (about.tsx in app/routes will route to <baseurl>/about). 
+- Shadcn/ui is used as component library.
 
-```bash
-npm run dev
-```
+# Project management
 
-Your application will be available at `http://localhost:5173`.
+This kata is tracked by this Trello kanban board: [Kanban Board](https://trello.com/invite/b/67fa2835db3fb7b5dd911c0c/ATTIf20112eaff94162ff3b51cfde195edde80434B52/kata)
 
-## Building for Production
+The git commits are structed with the kata-[ticket number] [title], so you can follow the linked tickets on the kata board.
 
-Create a production build:
+The kanban tickets with blue labels are kata-Typescript only.
 
-```bash
-npm run build
-```
+You can also see the public repo here: [kata-typescript-java](https://github.com/BramDeCneudt/kata-typescript-react)
 
-## Deployment
+# Gilded Rose Requirements Specification
 
-### Docker Deployment
+Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a
+prominent city ran by a friendly innkeeper named Allison. We also buy and sell only the finest goods.
+Unfortunately, our goods are constantly degrading in `Quality` as they approach their sell by date.
 
-To build and run using Docker:
+We have a system in place that updates our inventory for us. It was developed by a no-nonsense type named
+Leeroy, who has moved on to new adventures. Your task is to add the new feature to our system so that
+we can begin selling a new category of items. First an introduction to our system:
 
-```bash
-docker build -t my-app .
+- All `items` have a `SellIn` value which denotes the number of days we have to sell the `items`
+- All `items` have a `Quality` value which denotes how valuable the item is
+- At the end of each day our system lowers both values for every item
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+Pretty simple, right? Well this is where it gets interesting:
 
-The containerized application can be deployed to any platform that supports Docker, including:
+- Once the sell by date has passed, `Quality` degrades twice as fast
+- The `Quality` of an item is never negative
+- __"Aged Brie"__ actually increases in `Quality` the older it gets
+- The `Quality` of an item is never more than `50`
+- __"Sulfuras"__, being a legendary item, never has to be sold or decreases in `Quality`
+- __"Backstage passes"__, like aged brie, increases in `Quality` as its `SellIn` value approaches;
+    - `Quality` increases by `2` when there are `10` days or less and by `3` when there are `5` days or less but
+    - `Quality` drops to `0` after the concert
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+We have recently signed a supplier of conjured items. This requires an update to our system:
 
-### DIY Deployment
+- __"Conjured"__ items degrade in `Quality` twice as fast as normal items
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+Feel free to make any changes to the `UpdateQuality` method and add any new code as long as everything
+still works correctly. However, do not alter the `Item` class or `Items` property as those belong to the
+goblin in the corner who will insta-rage and one-shot you as he doesn't believe in shared code
+ownership (you can make the `UpdateQuality` method and `Items` property static if you like, we'll cover
+for you).
 
-Make sure to deploy the output of `npm run build`
+Just for clarification, an item can never have its `Quality` increase above `50`, however __"Sulfuras"__ is a
+legendary item and as such its `Quality` is `80` and it never alters.
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.

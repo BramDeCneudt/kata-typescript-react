@@ -52,7 +52,7 @@ export default function Home() {
         <p>Day: {amountOfDays}</p>
       </div>
       <div className="pl-5 flex flex-row gap-4 justify-center flex-wrap">
-        {items.map((item) => <ItemCard item={item} />)}
+        {items.map((item, index) => <ItemCard key={index} item={item} />)}
       </div>
     </>
   )

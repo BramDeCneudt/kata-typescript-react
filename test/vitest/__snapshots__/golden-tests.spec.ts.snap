@@ -74,17 +74,17 @@ exports[`Gilded Rose Golden Test > Golden Test base test 1`] = `
   },
   Item {
     "name": "Conjured Mana Cake",
-    "quality": 5,
+    "quality": 4,
     "sellIn": 2,
   },
   Item {
     "name": "Conjured Mana Cake",
-    "quality": 4,
+    "quality": 2,
     "sellIn": -4,
   },
   Item {
     "name": "Conjured Mana Cake",
-    "quality": 1,
+    "quality": 0,
     "sellIn": -4,
   },
 ]
@@ -165,17 +165,17 @@ exports[`Gilded Rose Golden Test > Golden Test test after 2 days 1`] = `
     },
     Item {
       "name": "Conjured Mana Cake",
-      "quality": 5,
+      "quality": 4,
       "sellIn": 2,
     },
     Item {
       "name": "Conjured Mana Cake",
-      "quality": 4,
+      "quality": 2,
       "sellIn": -4,
     },
     Item {
       "name": "Conjured Mana Cake",
-      "quality": 1,
+      "quality": 0,
       "sellIn": -4,
     },
   ],

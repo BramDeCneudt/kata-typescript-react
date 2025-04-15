@@ -203,3 +203,45 @@ describe('Backstage Passes', () => {
   });
 
 });
+
+describe('Conjured Items', () => {
+
+  test('with positive sellIn should decrease quality by 2', () => {
+    const itemName = "Conjured Mana Cake";
+    const items: Item[] = [new Item(itemName, 5, 20)];
+    const app: GildedRose = new GildedRose(items);
+
+    app.updateQuality();
+
+    expect(itemName).toBe(app.items[0].name);
+    expect(app.items[0].quality).toBe(18);
+    expect(app.items[0].sellIn).toBe(4);
+  });
+
+
+  test('with sellIn 0 should decrease quality by 4', () => {
+    const itemName = "Conjured Mana Cake";
+    const items: Item[] = [new Item(itemName, 0, 20)];
+    const app: GildedRose = new GildedRose(items);
+
+    app.updateQuality();
+
+    expect(itemName).toBe(app.items[0].name);
+    expect(app.items[0].quality).toBe(16);
+    expect(app.items[0].sellIn).toBe(-1);
+  });
+
+
+  test('with negative sellIn should decrease quality by 4', () => {
+    const itemName = "Conjured Mana Cake";
+    const items: Item[] = [new Item(itemName, -5, 20)];
+    const app: GildedRose = new GildedRose(items);
+
+    app.updateQuality();
+
+    expect(itemName).toBe(app.items[0].name);
+    expect(app.items[0].quality).toBe(16);
+    expect(app.items[0].sellIn).toBe(-6);
+  });
+
+});

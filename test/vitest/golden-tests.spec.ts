@@ -1,16 +1,5 @@
-import { execSync } from 'node:child_process';
 import { Item, GildedRose } from '@/lib/gilded-rose';
 import { describe, expect, test } from 'vitest';
-
-/**
- * This test uses Vitest Snapshot, similar to [Jest Snapshot](https://goo.gl/fbAQLP).
- *
- * There are two test cases here with different styles:
- * <li>"foo" is more similar to the unit test from the 'Java' version
- * <li>"thirtyDays" is more similar to the TextTest from the 'Java' version
- *
- * I suggest choosing one style to develop and deleting the other.
- */
 
 
 describe('Gilded Rose Golden Test', () => {

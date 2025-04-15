@@ -67,6 +67,20 @@ export class BackstagePassesStrategy extends DefaultStrategy {
     }
 }
 
+
+export class ConjuredStrategy extends DefaultStrategy {
+
+    public updateItem(item: Item): void {
+        if (item.sellIn > 0) {
+            item.quality -= 2;
+        } else {
+            item.quality -= 4;
+        }
+
+        this.reduceSellInAndCheckMaxAndMinQuality(item);
+    }
+}
+
 export class LegendaryStrategy extends DefaultStrategy {
 
     protected standardQualityLegendaryItem: number = 80;
